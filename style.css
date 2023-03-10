@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --blue:rgb(61, 126, 175);
+    --rosa: rgba(59, 137, 193, 0.845);
+    --rosaHover: rgba(33, 63, 90, 0.599);
+    --blueTask:rgba(81, 108, 111, 0.427);
+}
+body{
+    height: 100vh;
+    background:linear-gradient(90deg, var(--blue)0%, var(--rosa)100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body.active{
+    background:linear-gradient(90deg, rgb(15, 23, 25)0%, rgba(35, 24, 22, 0.845)100%);
+}
+.container{
+    border: 2px solid #fff;
+    padding: 30px 40px;
+    width: 40%;
+    min-width: 500px;
+    border-radius: 5px;
+}
+
+.newTaskContainer{
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    display: flex;
+}
+
+.newTaskContainer input{
+    flex: 3;
+    font-size: 1rem;
+    border: 2px solid #d2d2d2;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: 500;
+}
+.newTaskContainer input:focus{
+    outline: none;
+    border-color:var(--rosa);
+}
+.newTaskButton{
+    flex: 1;
+    border-radius: 5px;
+    font-weight: 500;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    background: var(--rosa);
+    color: #fff;
+    padding:12px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+.newTaskButton:hover{
+    background: var(--rosaHover);
+}
+.tasksContainer{
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    width: 100%;
+}
+
+.taskItem{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    background-color: var(--blueTask);
+    border-radius: 5px;
+}
+.taskItem i{
+    background-color: var(--rosa);
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+}
+.taskItem i:hover{
+    cursor: pointer;
+    background-color: var(--rosaHover);
+    width: 40px;
+}
+p{
+    font-size: 22px;
+    margin-left: 5px;
+}
+p:hover{
+    cursor: pointer;
+}
+.taskItem .completed{
+    background-color: rgba(13, 0, 128, 0.453);
+    border-radius: 5px;
+}
+
+/* Ultilites */
+.error{
+    border:2px solid red !important ;
+}
+.error::placeholder{
+    color: red;
+}
+.completed{
+    text-decoration: line-through;
+}
+
+/* darkmode */
+.borda{
+    top: 100px;
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    border-radius: 25px;
+    border: solid #fff;
+    margin-left: 40%;
+}
+.ball{
+    
+    margin-left: 4px;
+    margin-top: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: .5s ease-out;
+    
+}
+.ball:hover{
+    cursor: pointer;
+}
+
+.borda h1{
+    position: absolute;
+    left: -150px;
+    top: -2px;
+    font-size: 25px;
+    font-weight: lighter;
+    color: #fff;
+}
+span{
+    color: #fff;
+}
+.ball.active{
+    margin-left:40px;
+}
+.tasksContainer.active{
+    background-color: rgb(56, 56, 56);
+}
+.newTaskContainer.active{
+    background-color: rgb(65, 65, 65);
+  
+}
+.container.active{
+    border:2px solid rgb(78, 78, 78);
+    color: #fff;
+}
+.taskItem.active{
+    background-color: rgb(65, 65, 65);
+    
+}
+/* title */
+.title{
+    color: #fff;
+    margin-left: auto;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/*menu*/
+header{
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    
+}
+header ul li{
+    margin-left: 15px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+}
+.ajuda:hover{
+    color: #afafaf;
+    transition: 0.5s;
+}
+.sobre:hover{
+    color: #afafaf;
+    transition: 0.5s;
+}
+.opcoes:hover{
+    color: #afafaf;
+    transition: 0.5s;
+}
+#ajudacontainer{
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    display: none;
+    left: 0;
+    background-color: rgb(44, 44, 44);
+}
+#close{
+    cursor: pointer;
+    float: right;
+    padding: 25px;
+    filter: invert();
+}
+#opcoescontainer{
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    display: none;
+    left: 0;
+    background-color:  rgb(44, 44, 44);
+
+}
+#closeOpitions{
+    cursor: pointer;
+    float: right;
+    padding: 25px;
+    filter: invert();
+}
+
+#sobrecontainer{
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    display: none;
+    left: 0;
+    background-color:  rgb(44, 44, 44);
+    color: #fff;
+    text-align: center;
+    
+   
+}
+#sobrecontainer p{
+    margin-top: 90px;
+    padding: 20px;
+    letter-spacing: 5px;
+}
+#sobrecontainer h1{
+    text-align: center;
+    margin-top: 70px;
+}
+#closesobre{
+    cursor: pointer;
+    float: right;
+    padding: 25px;
+    filter: invert();
+    
+
+}
+
+
+/* logo libras */
+
+.imglibras{
+    position: absolute;
+    right: 0;
+    
+}
+.imglibras img{
+    width: 80px;
+    cursor: pointer;
+}
+.imglibras #libras{
+    position: relative;
+    left: 15px;
+    top: -15px;
+    width: 0px;
+}

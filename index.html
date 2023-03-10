@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefa</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                
+                <li class="opcoes">Opções</li>
+                
+                <li class="sobre">Sobre</li>
+               
+            </ul>
+        </nav>
+    </header>
+    <div id="ajudacontainer"><i id="close" class="fa-solid fa-circle-xmark"></i></div>
+    <div id="opcoescontainer"><i id="closeOpitions" class="fa-solid fa-circle-xmark"></i>
+        <div class="borda">
+            <div class="ball" onclick="dark()"></div>
+            <h1>DarkMode</h1>
+        </div>
+    
+    </div>
+    <div id="sobrecontainer"><i id="closesobre" class="fa-solid fa-circle-xmark"></i>
+        <h1>Sobre lista de tarefas</h1>
+        <p>As tarefas de uma lista devem ser metas para incentivar e organizar o que seja necessário,tanto na vida pessoal ou no trabalho. Por exemplo, levar uma lista de objetivos para suas reuniões pode otimizar tempo, ajudar na dinâmica com o time e, consequentemente, ser mais produtivo.</p>
+    </div>
+
+    <div class="imglibras">
+    <img id="libras" src="./assents/vlibras.png" alt="">
+    <img id="libraslogo" src="./assents/c6455558-27fa-47ff-bbcf-0282d356f7c2.png"></div>
+    
+    <div class="container">
+        <h1 class="title">Lista de tarefas</h1>
+        <div class="newTaskContainer">
+            <input type="text" class="newTextInput" placeholder="Tarefa para ser feita">
+
+            <button class="newTaskButton">Adicionar</button>
+        </div>
+        <div class="tasksContainer"></div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/ea86b4540c.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
